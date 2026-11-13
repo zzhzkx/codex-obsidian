@@ -41,12 +41,12 @@
     "GEMINI.md",
     "LICENSE",
     "Makefile",
-    "plugin.json",
     "PRIVACY.md",
     "README.md",
     "SECURITY.md",
     "WIKI.md",
-    "ZCODE.md"
+    "ZCODE.md",
+    "plugin.json"
   ],
   "include_globs": [
     ".github/*.md",
