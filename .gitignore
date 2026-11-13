@@ -51,6 +51,8 @@ auth.json
 
 # Personal files dropped into vault root by Obsidian (don't commit these)
 WIKI*.md
+!/WIKI.md
+!/agents/wiki-*.md
 PROMPT.md
 Welcome.md
 *.tmp.*
