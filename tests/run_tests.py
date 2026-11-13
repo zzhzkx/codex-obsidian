@@ -39,6 +39,9 @@ def _run(path: Path, timeout: int) -> tuple[str, str, int]:
         "PYTHONDONTWRITEBYTECODE": "1",
         "PYTHONIOENCODING": "utf-8",
         "PYTHONUTF8": "1",
+        "GIT_CONFIG_COUNT": "1",
+        "GIT_CONFIG_KEY_0": "core.autocrlf",
+        "GIT_CONFIG_VALUE_0": "false",
     }
     completed = subprocess.run(
         [sys.executable, str(path)],
