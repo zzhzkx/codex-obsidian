@@ -1,0 +1,29 @@
+{
+  "name": "codex-obsidian",
+  "version": "2.2.0",
+  "description": "Local-first Agent Skills package and Codex plugin for source-cited Obsidian knowledge bases. Provides explicit vault initialization and adoption, recoverable operation transactions, deterministic lint and retrieval, provenance ledgers, offline-first capture foundations, and optional methodology modes. User vaults stay outside the plugin cache; network and destructive actions require explicit consent.",
+  "author": {
+    "name": "zzhzkx",
+    "url": "https://github.com/zzhzkx"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zzhzkx/codex-obsidian",
+  "repository": "https://github.com/zzhzkx/codex-obsidian",
+  "keywords": [
+    "codex",
+    "obsidian",
+    "knowledge-base",
+    "wiki",
+    "memory",
+    "notetaker",
+    "second-brain",
+    "vault",
+    "markdown",
+    "cross-project",
+    "llm-wiki",
+    "karpathy",
+    "pkm",
+    "canvas",
+    "visual"
+  ]
+}

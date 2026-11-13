@@ -1,0 +1,31 @@
+{
+  "description": "Optional Codex lifecycle hooks for codex-obsidian.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact|fork",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$PLUGIN_ROOT/scripts/codex-obsidian.py\" hook session-start",
+            "commandWindows": "python \"%PLUGIN_ROOT%\\scripts\\codex-obsidian.py\" hook session-start",
+            "statusMessage": "Loading Obsidian vault context",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$PLUGIN_ROOT/scripts/codex-obsidian.py\" hook stop",
+            "commandWindows": "python \"%PLUGIN_ROOT%\\scripts\\codex-obsidian.py\" hook stop",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

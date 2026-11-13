@@ -1,0 +1,22 @@
+{
+  "description": "Distribution channel for codex-obsidian",
+  "name": "codex-obsidian",
+  "owner": {
+    "name": "zzhzkx"
+  },
+  "plugins": [
+    {
+      "author": {
+        "name": "zzhzkx",
+        "url": "https://github.com/zzhzkx"
+      },
+      "description": "Local-first Agent Skills package and Codex plugin for source-cited Obsidian knowledge bases. Includes recoverable transactions, deterministic lint and retrieval, provenance ledgers, explicit vault adoption, and methodology modes.",
+      "homepage": "https://github.com/zzhzkx/codex-obsidian",
+      "license": "MIT",
+      "name": "codex-obsidian",
+      "repository": "https://github.com/zzhzkx/codex-obsidian",
+      "source": "./"
+    }
+  ],
+  "version": "2.2.0"
+}

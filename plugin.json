@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-obsidian",
+  "version": "2.2.0",
+  "description": "Local-first Agent Skills package and Codex plugin for source-cited Obsidian knowledge bases. Ported from claude-obsidian with Codex manifests, Codex lifecycle hooks, and a native-Windows write path.",
+  "author": {
+    "name": "zzhzkx",
+    "url": "https://github.com/zzhzkx"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zzhzkx/codex-obsidian",
+  "repository": "https://github.com/zzhzkx/codex-obsidian",
+  "keywords": [
+    "codex",
+    "obsidian",
+    "knowledge-base",
+    "wiki",
+    "memory",
+    "notetaker",
+    "second-brain",
+    "vault",
+    "markdown",
+    "cross-project",
+    "llm-wiki",
+    "pkm",
+    "canvas"
+  ],
+  "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Codex Obsidian",
+        "shortDescription": "Build a source-cited Obsidian knowledge base",
+        "longDescription": "Capture sources, create linked Obsidian notes, retrieve grounded answers, and keep the vault healthy. The vault stays a normal directory of Markdown, JSON, and source files. Includes recoverable transactions, provenance ledgers, deterministic lint and retrieval, and explicit vault initialization or adoption.",
+        "category": "Productivity",
+        "developerName": "zzhzkx",
+        "defaultPrompt": [
+          "Ingest this source into my Obsidian vault and cite it.",
+          "Answer from the evidence already in my vault.",
+          "Lint my vault and fix the broken links."
+        ],
+        "websiteURL": "https://github.com/zzhzkx/codex-obsidian",
+        "supportURL": "https://github.com/zzhzkx/codex-obsidian/issues"
+      }
+    }
+  }
+}
