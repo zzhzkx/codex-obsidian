@@ -383,13 +383,13 @@ capability-detected and affect only their dependent workflow.
 ## Development and release
 
 ```bash
-make test
+python tests/run_tests.py
 ```
 
-The test target runs every hermetic Python and shell suite, product and
-capability contracts, skill and hook validation, manifest checks, and package
-boundaries. CI repeats the suite on supported Linux and macOS/Python
-combinations and verifies a byte-reproducible release build.
+The runner executes every `tests/test_*.py` file in its own process. On native
+Windows it skips the upstream adversarial tests that need POSIX symlink
+privileges or bash wrappers, and fails on everything else. `make test`
+additionally runs the shell suites and package contracts on macOS/Linux.
 
 Build and audit locally without publishing:
 

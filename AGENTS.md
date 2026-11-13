@@ -97,6 +97,7 @@ workspace-configured vault outside the project also requires an exact
 
 ## Reference
 
-- Public canonical repository: https://github.com/AgriciDaniel/claude-obsidian
+- This repository: https://github.com/zzhzkx/codex-obsidian
+- Upstream design source: https://github.com/AgriciDaniel/claude-obsidian
 - LLM Wiki pattern: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - Obsidian primitives: https://github.com/kepano/obsidian-skills
