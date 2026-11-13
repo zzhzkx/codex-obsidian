@@ -229,6 +229,9 @@ class BuildTests(ReleaseRepo):
         self.assertIn("duplicate_entry", _codes(report))
         self.assertFalse(self.output.exists())
 
+    @unittest.skipIf(
+        os.name == "nt", "Windows Git records regular blobs as mode 100644"
+    )
     def test_two_builds_are_byte_identical_and_self_auditing(self) -> None:
         first_path = self.home / "first.zip"
         second_path = self.home / "second.zip"
@@ -731,6 +734,9 @@ class AuditTests(ReleaseRepo):
             {"manifest_mismatch", "checksum_mismatch"}.issubset(_codes(report)), report
         )
 
+    @unittest.skipIf(
+        os.name == "nt", "Windows Git records regular blobs as mode 100644"
+    )
     def test_mode_tampering_is_rejected_against_manifest(self) -> None:
         valid = self.build()
         self.assertTrue(valid["ok"], valid)
