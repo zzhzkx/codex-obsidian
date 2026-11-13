@@ -20,5 +20,8 @@
     "canvas"
   ],
   "skills": "./skills/",
-  "hooks": "./hooks/hooks.json"
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "composerIcon": "./.codex-plugin/icon.jpg"
+  }
 }

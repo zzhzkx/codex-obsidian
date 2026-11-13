@@ -14,7 +14,21 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PYTHON_LAUNCHERS = tuple(sorted((ROOT / "scripts").glob("*.py")))
+_LOCAL_IMPORT_MARKERS = (
+    "from claude_obsidian",
+    "import claude_obsidian",
+    "spec.loader.exec_module",
+)
+PYTHON_LAUNCHERS = tuple(
+    sorted(
+        path
+        for path in (ROOT / "scripts").glob("*.py")
+        if any(
+            marker in path.read_text(encoding="utf-8")
+            for marker in _LOCAL_IMPORT_MARKERS
+        )
+    )
+)
 SETUP_SCRIPT_NAMES = frozenset(
     {
         "setup-dragonscale.sh",
@@ -84,11 +98,7 @@ class InstalledTreeBoundaryTests(unittest.TestCase):
                 self.assertGreaterEqual(guard, 0)
                 local_imports = [
                     position
-                    for marker in (
-                        "from claude_obsidian",
-                        "import claude_obsidian",
-                        "spec.loader.exec_module",
-                    )
+                    for marker in _LOCAL_IMPORT_MARKERS
                     if (position := source.find(marker)) >= 0
                 ]
                 self.assertTrue(

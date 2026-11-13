@@ -80,6 +80,7 @@
     "max_total_bytes": 52428800
   },
   "reviewed_binaries": {
+    ".codex-plugin/icon.jpg": "8835755819728ab14a341135dd2af2f07c1c92285af3e3b4f1083fff98a00dc9",
     "assets/cover.png": "7921a6494df958c9bf236cbaa141fc23641efc2ca16f2775be9913ce91724197",
     "assets/screenshots/graph-view.png": "9faa4a414ccfa2618ab849519ca81a66fe5eb096c90491fc9fe650099f3002cc",
     "assets/screenshots/wiki-map-view.png": "76d5e1ce23d4a76bca4c09e737fb3ac494e787556fcb385d6acc2af66235be89",

@@ -20,6 +20,7 @@ implementation record for older releases.
 ### Added
 
 - `scripts/codex-obsidian.py` as the canonical CLI entry point.
+- Plugin listing icon via `interface.composerIcon` in `.codex-plugin/plugin.json`.
 - `scripts/setup-{vault,mode,retrieve,dragonscale,multi-agent}.py` and
   `scripts/detect-transport.py` for Windows-native setup.
 

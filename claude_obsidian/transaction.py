@@ -2742,6 +2742,9 @@ class _OperationStore:
             return False
         return _runtime_entry_metadata(self.backups_fd, name) is not None
 
+    def backups_available(self) -> bool:
+        return self.backups_fd is not None
+
     def read_backup(self, name: str, *, label: str) -> bytes:
         if self.backups_dir is not None:
             return _read_path_regular(self.backups_dir / name, label=label)
@@ -3032,6 +3035,9 @@ class _PathOperationStore:
 
     def backup_exists(self, name: str) -> bool:
         return (self.root / "backups" / name).is_file()
+
+    def backups_available(self) -> bool:
+        return self.backups_dir is not None
 
     def read_backup(self, name: str, *, label: str) -> bytes:
         return _read_path_regular(self.root / "backups" / name, label=label)
@@ -4558,11 +4564,12 @@ def _validated_recovery_writes(
     )
     backup_metadata = transaction.backup_metadata()
     if needs_backups or backup_metadata is not None:
-        if backup_metadata is None or not stat.S_ISDIR(backup_metadata.st_mode):
-            raise TransactionRecoveryError(
-                "CORRUPT_JOURNAL", "journal backup path is not a safe directory"
-            )
-        transaction.require_backups()
+        if not transaction.backups_available():
+            if backup_metadata is None or not stat.S_ISDIR(backup_metadata.st_mode):
+                raise TransactionRecoveryError(
+                    "CORRUPT_JOURNAL", "journal backup path is not a safe directory"
+                )
+            transaction.require_backups()
 
     validated: list[RecoveryWrite] = []
     seen_casefold: dict[str, str] = {}

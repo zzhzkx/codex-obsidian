@@ -619,6 +619,7 @@ class CanonicalPolicyTests(unittest.TestCase):
         self.assertEqual(["ATTRIBUTION.md"], config["approved_private_url_disclosures"])
         reviewed = config["reviewed_binaries"]
         expected_binaries = [
+            ".codex-plugin/icon.jpg",
             "assets/cover.png",
             "assets/screenshots/graph-view.png",
             "assets/screenshots/wiki-map-view.png",
