@@ -39,6 +39,8 @@
           "Answer from the evidence already in my vault.",
           "Lint my vault and fix the broken links."
         ],
+        "logo": "./.codex-plugin/icon.jpg",
+        "composerIcon": "./.codex-plugin/icon.jpg",
         "websiteURL": "https://github.com/zzhzkx/codex-obsidian",
         "supportURL": "https://github.com/zzhzkx/codex-obsidian/issues"
       }

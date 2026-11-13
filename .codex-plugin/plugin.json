@@ -21,7 +21,5 @@
   ],
   "skills": "./skills/",
   "hooks": "./hooks/hooks.json",
-  "interface": {
-    "composerIcon": "./.codex-plugin/icon.jpg"
-  }
+  "icon": "./.codex-plugin/icon.jpg"
 }
